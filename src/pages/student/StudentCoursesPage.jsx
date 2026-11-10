@@ -175,17 +175,7 @@ const StudentCoursesPage = () => {
 
                   {item.instructor && (
                     <div className="d-flex align-items-center text-muted small mb-3">
-                      <img
-                        src={
-                          item.instructor.avatar ||
-                          'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150'
-                        }
-                        alt=""
-                        className="rounded-circle me-2 border"
-                        width="24"
-                        height="24"
-                        style={{ objectFit: 'cover' }}
-                      />
+                      <i className="bi bi-person me-1"></i>
                       <span>{item.instructor.name}</span>
                     </div>
                   )}

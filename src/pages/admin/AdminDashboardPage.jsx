@@ -188,17 +188,6 @@ const AdminDashboardPage = () => {
                     <tr key={enr.id}>
                       <td className="ps-3">
                         <div className="d-flex align-items-center">
-                          <img
-                            src={
-                              enr.student?.avatar ||
-                              'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150'
-                            }
-                            alt=""
-                            className="rounded-circle me-2 border"
-                            width="32"
-                            height="32"
-                            style={{ objectFit: 'cover' }}
-                          />
                           <div>
                             <div className="fw-semibold text-dark">
                               {enr.student?.name || `ID #${enr.studentId}`}

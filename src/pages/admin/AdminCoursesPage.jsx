@@ -221,17 +221,6 @@ const AdminCoursesPage = () => {
                         <td>
                           {assignedInstructor ? (
                             <div className="d-flex align-items-center">
-                              <img
-                                src={
-                                  assignedInstructor.avatar ||
-                                  'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150'
-                                }
-                                alt=""
-                                className="rounded-circle me-2 border"
-                                width="28"
-                                height="28"
-                                style={{ objectFit: 'cover' }}
-                              />
                               <div>
                                 <div className="fw-semibold text-dark small">
                                   {assignedInstructor.name}

@@ -240,17 +240,6 @@ const AdminUsersPage = () => {
                     <tr key={u.id}>
                       <td className="ps-3">
                         <div className="d-flex align-items-center">
-                          <img
-                            src={
-                              u.avatar ||
-                              'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150'
-                            }
-                            alt=""
-                            className="rounded-circle me-2 border"
-                            width="36"
-                            height="36"
-                            style={{ objectFit: 'cover' }}
-                          />
                           <div>
                             <div className="fw-semibold text-dark">{u.name}</div>
                             <div className="text-muted small">ID: #{u.id}</div>

@@ -224,20 +224,12 @@ const CourseDetailPage = () => {
                 <div className="border-top pt-3 mt-4">
                   <h6 className="fw-bold mb-3 text-secondary">Giảng viên hướng dẫn</h6>
                   <div className="d-flex align-items-center">
-                    <img
-                      src={
-                        instructor.avatar ||
-                        'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150'
-                      }
-                      alt={instructor.name}
-                      className="rounded-circle me-3 border"
-                      width="50"
-                      height="50"
-                      style={{ objectFit: 'cover' }}
-                    />
                     <div>
-                      <div className="fw-bold text-dark">{instructor.name}</div>
-                      <div className="text-muted small">{instructor.email}</div>
+                      <div className="fw-bold text-dark">
+                        <i className="bi bi-person-circle me-2 text-primary"></i>
+                        {instructor.name}
+                      </div>
+                      <div className="text-muted small ps-4">{instructor.email}</div>
                     </div>
                   </div>
                 </div>

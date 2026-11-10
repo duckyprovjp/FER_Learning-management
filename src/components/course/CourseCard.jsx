@@ -55,17 +55,7 @@ const CourseCard = ({ course, instructor }) => {
         <div className="d-flex align-items-center pt-2 border-top mt-auto">
           {instructor ? (
             <div className="d-flex align-items-center small text-secondary">
-              <img
-                src={
-                  instructor.avatar ||
-                  'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150'
-                }
-                alt={instructor.name}
-                className="rounded-circle me-2 border"
-                width="28"
-                height="28"
-                style={{ objectFit: 'cover' }}
-              />
+              <i className="bi bi-person me-1"></i>
               <span className="text-truncate" style={{ maxWidth: '140px' }}>
                 {instructor.name}
               </span>

@@ -42,7 +42,7 @@ const Header = () => {
   };
 
   return (
-    <Navbar bg="white" expand="lg" className="border-bottom shadow-sm sticky-top">
+    <Navbar bg="white" expand="lg" className="border-bottom shadow-sm sticky-top" style={{ zIndex: 1040 }}>
       <Container>
         <Navbar.Brand as={Link} to="/" className="fw-bold text-primary d-flex align-items-center">
           <i className="bi bi-mortarboard-fill me-2 fs-4"></i>
@@ -57,22 +57,13 @@ const Header = () => {
 
             {/* Quyền Student */}
             {isAuthenticated && user?.role === 'student' && (
-              <>
-                <Nav.Link
-                  as={Link}
-                  to="/student/courses"
-                  active={location.pathname.startsWith('/student/courses')}
-                >
-                  Khóa học của tôi
-                </Nav.Link>
-                <Nav.Link
-                  as={Link}
-                  to="/student/results"
-                  active={location.pathname === '/student/results'}
-                >
-                  Kết quả học tập
-                </Nav.Link>
-              </>
+              <Nav.Link
+                as={Link}
+                to="/student/courses"
+                active={location.pathname.startsWith('/student/courses')}
+              >
+                Khóa học của tôi
+              </Nav.Link>
             )}
 
             {/* Quyền Instructor */}
@@ -118,17 +109,6 @@ const Header = () => {
           <Nav className="align-items-lg-center">
             {isAuthenticated && user ? (
               <div className="d-flex align-items-center mt-2 mt-lg-0">
-                <img
-                  src={
-                    user.avatar ||
-                    'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150'
-                  }
-                  alt={user.name}
-                  className="rounded-circle me-2 border"
-                  width="36"
-                  height="36"
-                  style={{ objectFit: 'cover' }}
-                />
                 <NavDropdown
                   title={
                     <span className="fw-semibold text-dark">
@@ -159,14 +139,9 @@ const Header = () => {
                     </NavDropdown.Item>
                   )}
                   {user.role === 'student' && (
-                    <>
-                      <NavDropdown.Item as={Link} to="/student/courses">
-                        Khóa học của tôi
-                      </NavDropdown.Item>
-                      <NavDropdown.Item as={Link} to="/student/results">
-                        Bảng điểm học tập
-                      </NavDropdown.Item>
-                    </>
+                    <NavDropdown.Item as={Link} to="/student/courses">
+                      Khóa học của tôi
+                    </NavDropdown.Item>
                   )}
                   <NavDropdown.Divider />
                   <NavDropdown.Item onClick={handleLogout} className="text-danger">

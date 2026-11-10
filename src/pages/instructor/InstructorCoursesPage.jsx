@@ -202,18 +202,9 @@ const InstructorCoursesPage = () => {
                               to={`/instructor/courses/${course.id}`}
                               variant="outline-primary"
                               size="sm"
-                              title="Quản lý Bài học, Bài tập & Học viên"
+                              title="Quản lý Bài học & Học viên"
                             >
                               <i className="bi bi-journal-text me-1"></i> Nội dung
-                            </Button>
-                            <Button
-                              as={Link}
-                              to={`/instructor/courses/${course.id}/grading`}
-                              variant="outline-success"
-                              size="sm"
-                              title="Chấm điểm bài tập của học viên"
-                            >
-                              <i className="bi bi-check2-square me-1"></i> Chấm điểm
                             </Button>
                             <Button
                               variant="outline-secondary"
@@ -257,7 +248,7 @@ const InstructorCoursesPage = () => {
         onHide={() => setShowConfirmModal(false)}
         onConfirm={handleConfirmDelete}
         title="Xác nhận xóa khóa học"
-        message={`Bạn có chắc chắn muốn xóa khóa học "${courseToDelete?.title}" không? Toàn bộ bài học và bài tập của khóa cũng sẽ bị xóa theo.`}
+        message={`Bạn có chắc chắn muốn xóa khóa học "${courseToDelete?.title}" không? Toàn bộ bài học của khóa cũng sẽ bị xóa theo.`}
         confirmText="Xóa Khóa Học"
         confirmVariant="danger"
         loading={actionLoading}

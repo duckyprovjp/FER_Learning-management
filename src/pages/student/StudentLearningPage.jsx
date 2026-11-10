@@ -1,17 +1,13 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { Container, Row, Col, Card, Button, Badge, ProgressBar, ListGroup, Alert } from 'react-bootstrap';
+import { Container, Row, Col, Card, Button, ProgressBar, ListGroup, Alert } from 'react-bootstrap';
 import { toast } from 'react-toastify';
 import courseApi from '../../api/courseApi';
 import lessonApi from '../../api/lessonApi';
-import assignmentApi from '../../api/assignmentApi';
-import submissionApi from '../../api/submissionApi';
 import progressApi from '../../api/progressApi';
 import useAuth from '../../hooks/useAuth';
 import LoadingSpinner from '../../components/common/LoadingSpinner';
-import SubmissionModal from '../../components/assignment/SubmissionModal';
 import { calcProgress } from '../../utils/calcProgress';
-import { formatDate } from '../../utils/formatDate';
 
 const StudentLearningPage = () => {
   const { courseId } = useParams();
@@ -19,8 +15,6 @@ const StudentLearningPage = () => {
 
   const [course, setCourse] = useState(null);
   const [lessons, setLessons] = useState([]);
-  const [assignments, setAssignments] = useState([]);
-  const [submissions, setSubmissions] = useState([]);
   const [progressRecords, setProgressRecords] = useState([]);
   const [currentLessonIndex, setCurrentLessonIndex] = useState(0);
 
@@ -28,31 +22,21 @@ const StudentLearningPage = () => {
   const [error, setError] = useState(null);
   const [actionLoading, setActionLoading] = useState(false);
 
-  // Modal nộp bài
-  const [showSubmissionModal, setShowSubmissionModal] = useState(false);
-  const [selectedAssignment, setSelectedAssignment] = useState(null);
-  const [selectedSubmission, setSelectedSubmission] = useState(null);
-
-  // Tải toàn bộ dữ liệu khóa học, bài học, bài tập, tiến độ và bài nộp
+  // Tải toàn bộ dữ liệu khóa học, bài học và tiến độ
   const fetchLearningData = useCallback(async () => {
     if (!user) return;
     setLoading(true);
     setError(null);
     try {
-      const [courseData, lessonList, assignmentList, progressList, mySubmissions] =
-        await Promise.all([
-          courseApi.getById(courseId),
-          lessonApi.getByCourse(courseId),
-          assignmentApi.getByCourse(courseId),
-          progressApi.getByStudentAndCourse(user.id, courseId),
-          submissionApi.getByStudent(user.id),
-        ]);
+      const [courseData, lessonList, progressList] = await Promise.all([
+        courseApi.getById(courseId),
+        lessonApi.getByCourse(courseId),
+        progressApi.getByStudentAndCourse(user.id, courseId),
+      ]);
 
       setCourse(courseData);
       setLessons(lessonList || []);
-      setAssignments(assignmentList || []);
       setProgressRecords(progressList || []);
-      setSubmissions(mySubmissions || []);
     } catch (err) {
       setError(err.message || 'Lỗi khi tải dữ liệu bài học');
     } finally {
@@ -72,15 +56,6 @@ const StudentLearningPage = () => {
     });
     return set;
   }, [progressRecords]);
-
-  // Map bài nộp theo assignmentId
-  const submissionMap = useMemo(() => {
-    const map = {};
-    submissions.forEach((s) => {
-      map[s.assignmentId] = s;
-    });
-    return map;
-  }, [submissions]);
 
   // Tiến độ hoàn thành khóa học
   const totalLessons = lessons.length;
@@ -141,13 +116,6 @@ const StudentLearningPage = () => {
     } finally {
       setActionLoading(false);
     }
-  };
-
-  // Mở modal nộp bài
-  const handleOpenSubmission = (asg) => {
-    setSelectedAssignment(asg);
-    setSelectedSubmission(submissionMap[asg.id] || null);
-    setShowSubmissionModal(true);
   };
 
   if (loading) {
@@ -288,94 +256,11 @@ const StudentLearningPage = () => {
             <Alert variant="info">Khóa học này chưa có bài học nào được đăng tải.</Alert>
           )}
 
-          {/* PHẦN BÀI TẬP CỦA KHÓA HỌC */}
-          <Card className="border-0 shadow-sm">
-            <Card.Header className="bg-white py-3">
-              <h5 className="fw-bold mb-0 text-dark">
-                <i className="bi bi-file-earmark-code me-2"></i>Bài Tập Thực Hành Khóa Học ({assignments.length})
-              </h5>
-            </Card.Header>
-            <Card.Body className="p-4">
-              {assignments.length === 0 ? (
-                <p className="text-muted fst-italic mb-0">
-                  Khóa học này hiện chưa có bài tập nào.
-                </p>
-              ) : (
-                <Row className="g-3">
-                  {assignments.map((asg) => {
-                    const submission = submissionMap[asg.id];
-                    const isSubmitted = Boolean(submission);
-                    const isGraded =
-                      submission?.score !== null && submission?.score !== undefined;
-                    const isPastDue = new Date() > new Date(asg.dueDate);
-
-                    return (
-                      <Col xs={12} key={asg.id}>
-                        <Card className="border">
-                          <Card.Body className="p-3">
-                            <div className="d-flex justify-content-between align-items-start mb-2">
-                              <div>
-                                <h6 className="fw-bold mb-1 text-primary">
-                                  {asg.title}
-                                </h6>
-                                <p className="text-muted small mb-2">
-                                  Hạn nộp: {formatDate(asg.dueDate, true)}
-                                </p>
-                              </div>
-                              <Badge bg="info">Thang điểm: {asg.maxScore}</Badge>
-                            </div>
-
-                            <p className="small text-secondary mb-3">
-                              {asg.content || asg.description}
-                            </p>
-
-                            <div className="d-flex justify-content-between align-items-center pt-2 border-top">
-                              {/* Trạng thái bài nộp */}
-                              <div>
-                                {!isSubmitted ? (
-                                  <Badge bg="secondary">Chưa nộp bài</Badge>
-                                ) : isGraded ? (
-                                  <Badge bg="success" className="fs-6">
-                                    <i className="bi bi-check2-circle me-1"></i>Đã chấm: {submission.score} / {asg.maxScore} điểm
-                                  </Badge>
-                                ) : (
-                                  <Badge bg="warning" text="dark">
-                                    <i className="bi bi-hourglass-split me-1"></i>Đã nộp (Chờ chấm điểm)
-                                  </Badge>
-                                )}
-                              </div>
-
-                              {/* Nút Nộp bài / Nộp lại */}
-                              <Button
-                                variant={isSubmitted ? 'outline-primary' : 'primary'}
-                                size="sm"
-                                onClick={() => handleOpenSubmission(asg)}
-                                disabled={isPastDue && !isSubmitted}
-                              >
-                                {isSubmitted ? 'Nộp lại bài làm' : 'Nộp bài ngay'}
-                              </Button>
-                            </div>
-
-                            {/* Phản hồi nhận xét của giảng viên nếu có */}
-                            {isGraded && submission.feedback && (
-                              <div className="alert alert-success py-2 px-3 small mt-3 mb-0">
-                                <strong>Nhận xét của Giảng viên:</strong> "{submission.feedback}"
-                              </div>
-                            )}
-                          </Card.Body>
-                        </Card>
-                      </Col>
-                    );
-                  })}
-                </Row>
-              )}
-            </Card.Body>
-          </Card>
         </Col>
 
         {/* CỘT PHẢI: TIẾN ĐỘ & DANH SÁCH BÀI HỌC */}
         <Col lg={4}>
-          <div className="sticky-top" style={{ top: '80px' }}>
+          <div className="sticky-top" style={{ top: '80px', zIndex: 10 }}>
             {/* Card Tiến độ */}
             <Card className="border-0 shadow-sm mb-3">
               <Card.Body className="p-3">
@@ -449,21 +334,6 @@ const StudentLearningPage = () => {
           </div>
         </Col>
       </Row>
-
-      {/* Modal Nộp bài tập */}
-      {selectedAssignment && (
-        <SubmissionModal
-          show={showSubmissionModal}
-          onHide={() => {
-            setShowSubmissionModal(false);
-            setSelectedAssignment(null);
-          }}
-          onSuccess={fetchLearningData}
-          assignment={selectedAssignment}
-          studentId={user.id}
-          currentSubmission={selectedSubmission}
-        />
-      )}
     </Container>
   );
 };

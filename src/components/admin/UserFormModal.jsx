@@ -221,20 +221,6 @@ const UserFormModal = ({ show, onHide, onSuccess, userToEdit = null }) => {
               </Form.Group>
             </div>
           </div>
-
-          <Form.Group className="mb-3" controlId="userAvatar">
-            <Form.Label className="fw-semibold small">URL Ảnh đại diện</Form.Label>
-            <Form.Control
-              type="url"
-              name="avatar"
-              placeholder="https://images.unsplash.com/..."
-              value={formData.avatar}
-              onChange={handleChange}
-            />
-            <Form.Text className="text-muted small">
-              Để trống nếu muốn sử dụng ảnh mặc định
-            </Form.Text>
-          </Form.Group>
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={onHide} disabled={loading}>

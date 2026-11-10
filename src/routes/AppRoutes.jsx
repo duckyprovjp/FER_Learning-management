@@ -25,12 +25,10 @@ import AdminCoursesPage from '../pages/admin/AdminCoursesPage';
 // Instructor Pages
 import InstructorCoursesPage from '../pages/instructor/InstructorCoursesPage';
 import InstructorCourseDetailPage from '../pages/instructor/InstructorCourseDetailPage';
-import InstructorGradingPage from '../pages/instructor/InstructorGradingPage';
 
 // Student Pages
 import StudentCoursesPage from '../pages/student/StudentCoursesPage';
 import StudentLearningPage from '../pages/student/StudentLearningPage';
-import StudentResultsPage from '../pages/student/StudentResultsPage';
 
 const AppRoutes = () => {
   return (
@@ -49,7 +47,6 @@ const AppRoutes = () => {
           <Route path="/student" element={<Navigate to="/student/courses" replace />} />
           <Route path="/student/courses" element={<StudentCoursesPage />} />
           <Route path="/student/courses/:courseId/learn" element={<StudentLearningPage />} />
-          <Route path="/student/results" element={<StudentResultsPage />} />
         </Route>
 
         {/* 404 Route */}
@@ -72,7 +69,6 @@ const AppRoutes = () => {
           <Route path="/instructor" element={<Navigate to="/instructor/courses" replace />} />
           <Route path="/instructor/courses" element={<InstructorCoursesPage />} />
           <Route path="/instructor/courses/:id" element={<InstructorCourseDetailPage />} />
-          <Route path="/instructor/courses/:id/grading" element={<InstructorGradingPage />} />
         </Route>
       </Route>
     </Routes>
