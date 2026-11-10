@@ -1,0 +1,726 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Nguyễn Quản Trị",
+      "email": "admin@fpt.edu.vn",
+      "password": "password123",
+      "role": "admin",
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150",
+      "status": "active"
+    },
+    {
+      "id": 2,
+      "name": "ThS. Trần Thị Mai",
+      "email": "instructor1@fpt.edu.vn",
+      "password": "password123",
+      "role": "instructor",
+      "avatar": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150",
+      "status": "active"
+    },
+    {
+      "id": 3,
+      "name": "TS. Lê Hoàng Nam",
+      "email": "instructor2@fpt.edu.vn",
+      "password": "password123",
+      "role": "instructor",
+      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150",
+      "status": "active"
+    },
+    {
+      "id": 4,
+      "name": "ThS. Phạm Quốc Tuấn",
+      "email": "instructor3@fpt.edu.vn",
+      "password": "password123",
+      "role": "instructor",
+      "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150",
+      "status": "active"
+    },
+    {
+      "id": 5,
+      "name": "Vũ Hải Đăng",
+      "email": "student1@fpt.edu.vn",
+      "password": "password123",
+      "role": "student",
+      "avatar": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=150",
+      "status": "active"
+    },
+    {
+      "id": 6,
+      "name": "Nguyễn Thị Thu Hà",
+      "email": "student2@fpt.edu.vn",
+      "password": "password123",
+      "role": "student",
+      "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150",
+      "status": "active"
+    },
+    {
+      "id": 7,
+      "name": "Lê Minh Quân",
+      "email": "student3@fpt.edu.vn",
+      "password": "password123",
+      "role": "student",
+      "avatar": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=150",
+      "status": "active"
+    },
+    {
+      "id": 8,
+      "name": "Hoàng Gia Huy",
+      "email": "student4@fpt.edu.vn",
+      "password": "password123",
+      "role": "student",
+      "avatar": "https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?w=150",
+      "status": "active"
+    },
+    {
+      "id": 9,
+      "name": "Đặng Thùy Dung",
+      "email": "student5@fpt.edu.vn",
+      "password": "password123",
+      "role": "student",
+      "avatar": "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150",
+      "status": "active"
+    },
+    {
+      "id": 10,
+      "name": "Bùi Anh Tuấn",
+      "email": "student6@fpt.edu.vn",
+      "password": "password123",
+      "role": "student",
+      "avatar": "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=150",
+      "status": "active"
+    },
+    {
+      "id": 11,
+      "name": "Phan Thanh Tùng",
+      "email": "student7@fpt.edu.vn",
+      "password": "password123",
+      "role": "student",
+      "avatar": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150",
+      "status": "active"
+    },
+    {
+      "id": 12,
+      "name": "Trịnh Thảo Nhi",
+      "email": "student8@fpt.edu.vn",
+      "password": "password123",
+      "role": "student",
+      "avatar": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=150",
+      "status": "active"
+    },
+    {
+      "id": 13,
+      "name": "Ngô Quang Huy",
+      "email": "student9@fpt.edu.vn",
+      "password": "password123",
+      "role": "student",
+      "avatar": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150",
+      "status": "active"
+    },
+    {
+      "id": 14,
+      "name": "Dương Minh Châu",
+      "email": "student10@fpt.edu.vn",
+      "password": "password123",
+      "role": "student",
+      "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150",
+      "status": "locked"
+    }
+  ],
+  "courses": [
+    {
+      "id": 1,
+      "title": "Lập trình Web Front-end với React JS (FER202)",
+      "description": "Nắm vững kiến thức cốt lõi về React 18, React Hooks, React Router DOM, quản lý State với Context API và gọi API qua Axios.",
+      "category": "Frontend",
+      "level": "Intermediate",
+      "instructorId": 2,
+      "thumbnail": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=600",
+      "status": "published",
+      "createdAt": "2026-02-15T08:00:00Z"
+    },
+    {
+      "id": 2,
+      "title": "JavaScript Căn Bản đến Nâng Cao cho Người Mới",
+      "description": "Học toàn diện cú pháp ES6+, Async/Await, Promise, DOM manipulation và tư duy lập trình hướng đối tượng trong JavaScript.",
+      "category": "Frontend",
+      "level": "Beginner",
+      "instructorId": 2,
+      "thumbnail": "https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?w=600",
+      "status": "published",
+      "createdAt": "2026-01-10T09:30:00Z"
+    },
+    {
+      "id": 3,
+      "title": "Xây Dựng RESTful API với Node.js & Express",
+      "description": "Thiết kế và phát triển RESTful API chuẩn mực, xử lý authentication với JWT, phân quyền và kết nối CSDL MongoDB/MySQL.",
+      "category": "Backend",
+      "level": "Intermediate",
+      "instructorId": 3,
+      "thumbnail": "https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=600",
+      "status": "published",
+      "createdAt": "2026-02-01T14:00:00Z"
+    },
+    {
+      "id": 4,
+      "title": "Thiết Kế Cơ Sở Dữ Liệu Quan Hệ SQL Chuyên Sâu",
+      "description": "Nắm vững chuẩn hóa dữ liệu từ 1NF đến BCNF, viết câu lệnh truy vấn phức tạp, tối ưu hóa chỉ mục Index và Transaction.",
+      "category": "Database",
+      "level": "Intermediate",
+      "instructorId": 3,
+      "thumbnail": "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=600",
+      "status": "published",
+      "createdAt": "2026-01-20T10:15:00Z"
+    },
+    {
+      "id": 5,
+      "title": "Lập Trình Ứng Dụng Di Động Đa Nền Tảng với React Native",
+      "description": "Tạo ứng dụng di động cho cả iOS và Android chỉ với một codebase React. Tích hợp camera, định vị GPS và push notification.",
+      "category": "Mobile",
+      "level": "Advanced",
+      "instructorId": 4,
+      "thumbnail": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600",
+      "status": "published",
+      "createdAt": "2026-02-10T16:20:00Z"
+    },
+    {
+      "id": 6,
+      "title": "Nhập Môn HTML5, CSS3 & Responsive Web Design",
+      "description": "Bắt đầu hành trình lập trình web với HTML ngữ nghĩa, CSS Flexbox, Grid và xây dựng website hiển thị mượt mà trên mọi màn hình.",
+      "category": "Frontend",
+      "level": "Beginner",
+      "instructorId": 2,
+      "thumbnail": "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=600",
+      "status": "published",
+      "createdAt": "2026-01-05T08:00:00Z"
+    },
+    {
+      "id": 7,
+      "title": "Phát Triển Ứng Dụng Fullstack MERN Stack Hiện Đại",
+      "description": "Kết hợp MongoDB, Express, React, Node.js tạo dự án thực tế hoàn chỉnh từ front-end đến back-end, triển khai lên đám mây.",
+      "category": "Fullstack",
+      "level": "Advanced",
+      "instructorId": 3,
+      "thumbnail": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600",
+      "status": "published",
+      "createdAt": "2026-02-25T11:45:00Z"
+    },
+    {
+      "id": 8,
+      "title": "Kiến Trúc Microservices & Docker cho Lập Trình Viên",
+      "description": "Tìm hiểu tư duy phân tách dịch vụ, đóng gói ứng dụng với Docker container, kết nối dịch vụ qua API Gateway và Message Queue.",
+      "category": "Backend",
+      "level": "Advanced",
+      "instructorId": 4,
+      "thumbnail": "https://images.unsplash.com/photo-1605745341112-85968b19335b?w=600",
+      "status": "published",
+      "createdAt": "2026-03-01T13:10:00Z"
+    }
+  ],
+  "lessons": [
+    {
+      "id": 1,
+      "courseId": 1,
+      "title": "Bài 1: Giới thiệu React 18 & Cấu trúc dự án CRA",
+      "content": "Nội dung bài học tìm hiểu về Virtual DOM, triết lý Component, JSX, và cách tổ chức thư mục dự án Create React App chuẩn mực.",
+      "videoUrl": "https://www.youtube.com/embed/SqcY0GlETPk",
+      "order": 1,
+      "duration": "18:45"
+    },
+    {
+      "id": 2,
+      "courseId": 1,
+      "title": "Bài 2: React Hooks Cốt Lõi - useState & useEffect",
+      "content": "Thực hành quản lý trạng thái cục bộ với useState và xử lý side effects, gọi API với useEffect kèm cleanup function.",
+      "videoUrl": "https://www.youtube.com/embed/O6P86uwfdR0",
+      "order": 2,
+      "duration": "24:10"
+    },
+    {
+      "id": 3,
+      "courseId": 1,
+      "title": "Bài 3: Điều hướng đa trang với React Router DOM v6",
+      "content": "Cấu hình Routes, Route, Outlet, Link, NavLink, useNavigate và cơ chế bảo vệ phân quyền ProtectedRoute.",
+      "videoUrl": "https://www.youtube.com/embed/Ul3y1LXxzdU",
+      "order": 3,
+      "duration": "20:30"
+    },
+    {
+      "id": 4,
+      "courseId": 1,
+      "title": "Bài 4: Quản lý State toàn cục với Context API & useReducer",
+      "content": "Xây dựng AuthContext hoàn chỉnh, sử dụng useReducer để xử lý các hành động đăng nhập, đăng xuất và phân quyền người dùng.",
+      "videoUrl": "https://www.youtube.com/embed/35lXWvCuM8o",
+      "order": 4,
+      "duration": "26:50"
+    },
+    {
+      "id": 5,
+      "courseId": 2,
+      "title": "Bài 1: Cú pháp hiện đại ES6+ (let, const, arrow function)",
+      "content": "Phân biệt var, let, const. Cách dùng arrow function, template string, default parameter và destructuring assignment.",
+      "videoUrl": "https://www.youtube.com/embed/NCwa_xi0Uuc",
+      "order": 1,
+      "duration": "15:20"
+    },
+    {
+      "id": 6,
+      "courseId": 2,
+      "title": "Bài 2: Bất đồng bộ trong JavaScript - Promise & Async/Await",
+      "content": "Hiểu sâu về Call Stack, Event Loop, cách xử lý tác vụ bất đồng bộ bằng Promise và cú pháp trực quan Async/Await.",
+      "videoUrl": "https://www.youtube.com/embed/PoRJizFvM7s",
+      "order": 2,
+      "duration": "22:15"
+    },
+    {
+      "id": 7,
+      "courseId": 2,
+      "title": "Bài 3: Thao tác DOM và Xử lý Sự Kiện",
+      "content": "Truy xuất phần tử DOM, thêm sửa xóa class, lắng nghe sự kiện click, submit, change trong form HTML.",
+      "videoUrl": "https://www.youtube.com/embed/y17RuWkWdn8",
+      "order": 3,
+      "duration": "19:40"
+    },
+    {
+      "id": 8,
+      "courseId": 3,
+      "title": "Bài 1: Khởi tạo Server HTTP với Express.js",
+      "content": "Cài đặt Express, cấu hình middleware, thiết lập các endpoint GET, POST, PUT, DELETE theo chuẩn RESTful.",
+      "videoUrl": "https://www.youtube.com/embed/L72fhGm1tfE",
+      "order": 1,
+      "duration": "21:05"
+    },
+    {
+      "id": 9,
+      "courseId": 3,
+      "title": "Bài 2: Kết nối Cơ Sở Dữ Liệu và Xử Lý Lỗi Tập Trung",
+      "content": "Tạo connection pool, thực hiện CRUD và viết middleware bắt lỗi tập trung (centralized error handling).",
+      "videoUrl": "https://www.youtube.com/embed/7CqJlxBYj-M",
+      "order": 2,
+      "duration": "25:30"
+    },
+    {
+      "id": 10,
+      "courseId": 3,
+      "title": "Bài 3: Xác thực Người dùng với JSON Web Token (JWT)",
+      "content": "Tạo JWT token khi đăng nhập, xây dựng verify middleware để bảo vệ các private route trong API.",
+      "videoUrl": "https://www.youtube.com/embed/mbsmsi7l3r4",
+      "order": 3,
+      "duration": "28:10"
+    },
+    {
+      "id": 11,
+      "courseId": 4,
+      "title": "Bài 1: Mô hình Thực Thể Quan Hệ (ERD) và Khóa Chính/Khóa Ngoại",
+      "content": "Phân tích yêu cầu bài toán thực tế, vẽ biểu đồ ERD, định nghĩa quan hệ 1-1, 1-nhiều, nhiều-nhiều.",
+      "videoUrl": "https://www.youtube.com/embed/QpdhBUYk7Kk",
+      "order": 1,
+      "duration": "17:50"
+    },
+    {
+      "id": 12,
+      "courseId": 4,
+      "title": "Bài 2: Kỹ thuật Chuẩn Hóa Cơ Sở Dữ Liệu (1NF - BCNF)",
+      "content": "Loại bỏ dư thừa dữ liệu, tránh bất thường khi thêm/xóa/sửa dữ liệu thông qua các dạng chuẩn 1NF, 2NF, 3NF.",
+      "videoUrl": "https://www.youtube.com/embed/UrYLYV7WSHM",
+      "order": 2,
+      "duration": "23:45"
+    },
+    {
+      "id": 13,
+      "courseId": 4,
+      "title": "Bài 3: Viết câu lệnh SQL Phức Tạp (JOIN, Subquery, Group By)",
+      "content": "Kết hợp nhiều bảng với INNER/LEFT JOIN, tổng hợp dữ liệu với GROUP BY và HAVING, lồng subquery hiệu quả.",
+      "videoUrl": "https://www.youtube.com/embed/7S_tz1z_5bA",
+      "order": 3,
+      "duration": "27:15"
+    },
+    {
+      "id": 14,
+      "courseId": 5,
+      "title": "Bài 1: Cài đặt Môi Trường React Native & Expo",
+      "content": "Cài đặt Node, Expo CLI, chạy thử ứng dụng trên thiết bị thật qua ứng dụng Expo Go.",
+      "videoUrl": "https://www.youtube.com/embed/0-S5a0eXPoc",
+      "order": 1,
+      "duration": "16:20"
+    },
+    {
+      "id": 15,
+      "courseId": 5,
+      "title": "Bài 2: Các Thành Phần Giao Diện Cốt Lõi (View, Text, FlatList)",
+      "content": "Sử dụng StyleSheet, xây dựng danh sách hiệu năng cao với FlatList, xử lý tương tác chạm TouchableOpacity.",
+      "videoUrl": "https://www.youtube.com/embed/obH0Po_RdDc",
+      "order": 2,
+      "duration": "21:40"
+    },
+    {
+      "id": 16,
+      "courseId": 5,
+      "title": "Bài 3: Điều Hướng React Navigation (Stack & Tab)",
+      "content": "Tạo bottom tab navigation kết hợp stack navigation cho trải nghiệm ứng dụng di động bản địa.",
+      "videoUrl": "https://www.youtube.com/embed/gPaB3CNhnAQ",
+      "order": 3,
+      "duration": "24:00"
+    },
+    {
+      "id": 17,
+      "courseId": 6,
+      "title": "Bài 1: Cấu trúc HTML5 chuẩn SEO & Semantic Tags",
+      "content": "Các thẻ ngữ nghĩa header, nav, main, section, article, footer giúp tối ưu SEO và tính dễ tiếp cận.",
+      "videoUrl": "https://www.youtube.com/embed/kUMe1FH4CHE",
+      "order": 1,
+      "duration": "14:30"
+    },
+    {
+      "id": 18,
+      "courseId": 6,
+      "title": "Bài 2: Bố cục Hiện Đại với CSS Flexbox & CSS Grid",
+      "content": "Làm chủ trục chính/trục phụ trong Flexbox, phân chia lưới đa cột linh hoạt với CSS Grid layout.",
+      "videoUrl": "https://www.youtube.com/embed/JJSoEo8JSnc",
+      "order": 2,
+      "duration": "22:50"
+    },
+    {
+      "id": 19,
+      "courseId": 6,
+      "title": "Bài 3: Responsive Design với Media Queries",
+      "content": "Thiết lập breakpoint phù hợp cho Mobile, Tablet, Desktop theo tư duy Mobile-First.",
+      "videoUrl": "https://www.youtube.com/embed/srvUrASNj0s",
+      "order": 3,
+      "duration": "19:15"
+    },
+    {
+      "id": 20,
+      "courseId": 7,
+      "title": "Bài 1: Thiết Kế Kiến Trúc Thư Mục Dự Án MERN Stack",
+      "content": "Tổ chức codebase phân tách client và server, cấu hình CORS, biến môi trường .env an toàn.",
+      "videoUrl": "https://www.youtube.com/embed/7CqJlxBYj-M",
+      "order": 1,
+      "duration": "20:00"
+    },
+    {
+      "id": 21,
+      "courseId": 7,
+      "title": "Bài 2: Tích Hợp Frontend React với Backend API",
+      "content": "Cấu hình Axios instance, đồng bộ hóa state người dùng và xử lý các lỗi phản hồi từ máy chủ.",
+      "videoUrl": "https://www.youtube.com/embed/35lXWvCuM8o",
+      "order": 2,
+      "duration": "25:10"
+    },
+    {
+      "id": 22,
+      "courseId": 7,
+      "title": "Bài 3: Triển Khai Ứng Dụng Lên Nền Tảng Đám Mây",
+      "content": "Build tối ưu hóa mã nguồn tĩnh React, deploy backend lên Render/Railway và frontend lên Vercel.",
+      "videoUrl": "https://www.youtube.com/embed/SqcY0GlETPk",
+      "order": 3,
+      "duration": "23:40"
+    },
+    {
+      "id": 23,
+      "courseId": 8,
+      "title": "Bài 1: Khái Niệm Microservices vs Monolithic",
+      "content": "So sánh ưu nhược điểm, khi nào nên chuyển đổi hệ thống sang kiến trúc phân tán microservices.",
+      "videoUrl": "https://www.youtube.com/embed/CdBtNQZH8a4",
+      "order": 1,
+      "duration": "18:20"
+    },
+    {
+      "id": 24,
+      "courseId": 8,
+      "title": "Bài 2: Đóng Gói Ứng Dụng với Docker & Docker Compose",
+      "content": "Viết Dockerfile đa giai đoạn (multi-stage build), kết nối các container với docker-compose.yml.",
+      "videoUrl": "https://www.youtube.com/embed/fqMOX6JJhGo",
+      "order": 2,
+      "duration": "27:30"
+    },
+    {
+      "id": 25,
+      "courseId": 8,
+      "title": "Bài 3: Giao Tiếp Bất Đồng Bộ qua Message Broker",
+      "content": "Ứng dụng RabbitMQ / Kafka để đồng bộ dữ liệu giữa các dịch vụ mà không gây nghẽn kết nối.",
+      "videoUrl": "https://www.youtube.com/embed/oUZjO00iMtY",
+      "order": 3,
+      "duration": "30:15"
+    }
+  ],
+  "enrollments": [
+    {
+      "id": 1,
+      "courseId": 1,
+      "studentId": 5,
+      "enrolledAt": "2026-03-01T09:00:00Z",
+      "status": "active"
+    },
+    {
+      "id": 2,
+      "courseId": 2,
+      "studentId": 5,
+      "enrolledAt": "2026-03-02T10:30:00Z",
+      "status": "active"
+    },
+    {
+      "id": 3,
+      "courseId": 3,
+      "studentId": 5,
+      "enrolledAt": "2026-03-03T14:15:00Z",
+      "status": "active"
+    },
+    {
+      "id": 4,
+      "courseId": 1,
+      "studentId": 6,
+      "enrolledAt": "2026-03-02T08:20:00Z",
+      "status": "active"
+    },
+    {
+      "id": 5,
+      "courseId": 2,
+      "studentId": 6,
+      "enrolledAt": "2026-03-04T11:00:00Z",
+      "status": "active"
+    },
+    {
+      "id": 6,
+      "courseId": 1,
+      "studentId": 7,
+      "enrolledAt": "2026-03-05T15:40:00Z",
+      "status": "active"
+    },
+    {
+      "id": 7,
+      "courseId": 4,
+      "studentId": 8,
+      "enrolledAt": "2026-03-05T16:00:00Z",
+      "status": "active"
+    },
+    {
+      "id": 8,
+      "courseId": 5,
+      "studentId": 9,
+      "enrolledAt": "2026-03-06T09:15:00Z",
+      "status": "active"
+    },
+    {
+      "studentId": 5,
+      "courseId": 4,
+      "enrolledAt": "2026-11-10T04:46:25.474Z",
+      "status": "active",
+      "id": 9
+    }
+  ],
+  "assignments": [
+    {
+      "id": 1,
+      "courseId": 1,
+      "title": "Bài tập 1: Xây dựng Todo App với React Hooks",
+      "content": "Sử dụng useState và useEffect để tạo ứng dụng Todo cho phép thêm, sửa, xóa, lọc công việc và lưu trữ vào localStorage.",
+      "dueDate": "2026-04-15T23:59:00Z",
+      "maxScore": 10
+    },
+    {
+      "id": 2,
+      "courseId": 1,
+      "title": "Bài tập 2: Quản lý Giỏ Hàng bằng Context API",
+      "content": "Tạo CartContext kết hợp useReducer để quản lý trạng thái thêm sản phẩm vào giỏ, tăng giảm số lượng và tính tổng tiền.",
+      "dueDate": "2026-04-30T23:59:00Z",
+      "maxScore": 10
+    },
+    {
+      "id": 3,
+      "courseId": 2,
+      "title": "Bài tập 1: Xử lý mảng và Object với ES6+",
+      "content": "Áp dụng map, filter, reduce để chuyển đổi dữ liệu và thực hiện gộp mảng với Spread Operator.",
+      "dueDate": "2026-04-10T23:59:00Z",
+      "maxScore": 10
+    },
+    {
+      "id": 4,
+      "courseId": 2,
+      "title": "Bài tập 2: Ứng dụng Thời Tiết gọi Fetch/Axios API",
+      "content": "Gọi dữ liệu thời tiết bất đồng bộ bằng async/await, hiển thị nhiệt độ và biểu tượng tương ứng lên giao diện HTML.",
+      "dueDate": "2026-04-25T23:59:00Z",
+      "maxScore": 10
+    },
+    {
+      "id": 5,
+      "courseId": 3,
+      "title": "Bài tập 1: Xây dựng API Quản lý Sách với Express",
+      "content": "Cung cấp đầy đủ các phương thức HTTP RESTful để quản lý danh mục sách kèm kiểm tra tính hợp lệ dữ liệu đầu vào.",
+      "dueDate": "2026-04-20T23:59:00Z",
+      "maxScore": 10
+    },
+    {
+      "id": 6,
+      "courseId": 3,
+      "title": "Bài tập 2: Cơ chế Phân Quyền RBAC bằng Middleware",
+      "content": "Viết auth middleware giải mã JWT token và checkRole middleware để chặn người dùng không có quyền truy cập endpoint bí mật.",
+      "dueDate": "2026-05-05T23:59:00Z",
+      "maxScore": 10
+    },
+    {
+      "id": 7,
+      "courseId": 4,
+      "title": "Bài tập 1: Thiết kế ERD cho Hệ Thống Thương Mại Điện Tử",
+      "content": "Vẽ biểu đồ ERD mô tả Khách hàng, Đơn hàng, Chi tiết đơn hàng, Sản phẩm và Danh mục hàng hóa.",
+      "dueDate": "2026-04-18T23:59:00Z",
+      "maxScore": 10
+    },
+    {
+      "id": 8,
+      "courseId": 4,
+      "title": "Bài tập 2: Tối ưu Truy Vấn SQL và Phân Tích Execution Plan",
+      "content": "Viết câu truy vấn báo cáo doanh thu theo tháng và tạo Index phù hợp để giảm thời gian thực thi câu lệnh.",
+      "dueDate": "2026-05-02T23:59:00Z",
+      "maxScore": 10
+    },
+    {
+      "id": 9,
+      "courseId": 5,
+      "title": "Bài tập 1: Ứng dụng Danh bạ với React Native FlatList",
+      "content": "Hiển thị danh sách liên hệ, chức năng tìm kiếm nhanh và chuyển trang xem thông tin chi tiết liên hệ.",
+      "dueDate": "2026-04-22T23:59:00Z",
+      "maxScore": 10
+    },
+    {
+      "id": 10,
+      "courseId": 5,
+      "title": "Bài tập 2: Tích hợp Camera và Thư viện Ảnh",
+      "content": "Cho phép người dùng chụp ảnh mới hoặc chọn ảnh đại diện từ máy và hiển thị ngay trên màn hình hồ sơ.",
+      "dueDate": "2026-05-08T23:59:00Z",
+      "maxScore": 10
+    },
+    {
+      "id": 11,
+      "courseId": 6,
+      "title": "Bài tập 1: Tạo Landing Page Giới Thiệu Sản Phẩm",
+      "content": "Sử dụng HTML ngữ nghĩa kết hợp CSS Flexbox xây dựng trang Landing page có Header cố định và Hero banner bắt mắt.",
+      "dueDate": "2026-04-12T23:59:00Z",
+      "maxScore": 10
+    },
+    {
+      "id": 12,
+      "courseId": 6,
+      "title": "Bài tập 2: Responsive Form Đăng Ký Đa Cột",
+      "content": "Thiết kế form đăng ký responsive tự động chuyển từ 2 cột trên Desktop về 1 cột trên điện thoại kèm hiệu ứng focus input.",
+      "dueDate": "2026-04-28T23:59:00Z",
+      "maxScore": 10
+    },
+    {
+      "id": 13,
+      "courseId": 7,
+      "title": "Bài tập 1: Kết nối Mongoose Schema và Model",
+      "content": "Định nghĩa Schema cho User và Post trong MongoDB, thêm validate bắt buộc và timestamp tự động.",
+      "dueDate": "2026-05-01T23:59:00Z",
+      "maxScore": 10
+    },
+    {
+      "id": 14,
+      "courseId": 7,
+      "title": "Bài tập 2: Hoàn thiện Tính năng Đăng bài và Bình luận",
+      "content": "Xây dựng luồng đăng bài viết và bình luận theo thời gian thực từ giao diện React đến database MongoDB.",
+      "dueDate": "2026-05-15T23:59:00Z",
+      "maxScore": 10
+    },
+    {
+      "id": 15,
+      "courseId": 8,
+      "title": "Bài tập 1: Viết Dockerfile Tối Ưu cho Ứng Dụng Node",
+      "content": "Tạo Dockerfile sử dụng Alpine Linux, tối ưu bộ nhớ đệm layer cache và thiết lập non-root user.",
+      "dueDate": "2026-05-04T23:59:00Z",
+      "maxScore": 10
+    },
+    {
+      "id": 16,
+      "courseId": 8,
+      "title": "Bài tập 2: Cấu hình Reverse Proxy Nginx với Docker Compose",
+      "content": "Thiết lập Nginx container đóng vai trò cổng vào điều phối request đến các service nội bộ.",
+      "dueDate": "2026-05-20T23:59:00Z",
+      "maxScore": 10
+    }
+  ],
+  "submissions": [
+    {
+      "id": 1,
+      "assignmentId": 1,
+      "studentId": 5,
+      "content": "Em đã hoàn thành ứng dụng Todo App. Mã nguồn sử dụng useState để quản lý tasks và useEffect lưu vào localStorage khi danh sách thay đổi. Link github: https://github.com/student1/react-todo-demo",
+      "submittedAt": "2026-03-08T10:15:00Z",
+      "score": 9.5,
+      "feedback": "Bài làm rất tốt, code sạch sẽ, chia component hợp lý. Lưu ý xử lý thêm trường hợp chuỗi rỗng khi bấm Enter.",
+      "gradedAt": "2026-03-09T08:30:00Z"
+    },
+    {
+      "id": 2,
+      "assignmentId": 2,
+      "studentId": 5,
+      "content": "Em đã hoàn thành bài tập 2 với CartContext và useReducer, đã xử lý các action ADD_TO_CART, REMOVE_ITEM, UPDATE_QTY.",
+      "submittedAt": "2026-03-10T14:20:00Z",
+      "score": 9,
+      "feedback": "Bài làm rất xuất sắc, áp dụng chuẩn reducer pattern!",
+      "gradedAt": "2026-11-10T04:16:15.258Z"
+    },
+    {
+      "id": 3,
+      "assignmentId": 1,
+      "studentId": 6,
+      "content": "Em nộp bài tập 1 React Hooks Todo App. Em đã tạo được đầy đủ các tính năng cơ bản và bộ lọc theo trạng thái công việc.",
+      "submittedAt": "2026-03-08T16:00:00Z",
+      "score": 8.5,
+      "feedback": "Giao diện đẹp, logic hoạt động tốt. Cần bổ sung kiểm tra trùng lặp tên công việc.",
+      "gradedAt": "2026-03-09T09:00:00Z"
+    },
+    {
+      "assignmentId": 7,
+      "studentId": 5,
+      "content": "Bài làm ERD hệ thống E-Commerce với các bảng Users, Orders, OrderDetails, Products.",
+      "submittedAt": "2026-11-10T04:46:25.612Z",
+      "score": 9,
+      "feedback": "Thiết kế chuẩn hóa tốt, khóa ngoại liên kết chính xác!",
+      "gradedAt": "2026-11-10T04:46:25.645Z",
+      "id": 4
+    }
+  ],
+  "progress": [
+    {
+      "id": 1,
+      "studentId": 5,
+      "courseId": 1,
+      "lessonId": 1,
+      "completed": true,
+      "completedAt": "2026-03-02T10:00:00Z"
+    },
+    {
+      "id": 2,
+      "studentId": 5,
+      "courseId": 1,
+      "lessonId": 2,
+      "completed": true,
+      "completedAt": "2026-03-03T11:20:00Z"
+    },
+    {
+      "id": 3,
+      "studentId": 5,
+      "courseId": 2,
+      "lessonId": 5,
+      "completed": true,
+      "completedAt": "2026-03-04T15:00:00Z"
+    },
+    {
+      "id": 4,
+      "studentId": 6,
+      "courseId": 1,
+      "lessonId": 1,
+      "completed": true,
+      "completedAt": "2026-03-03T09:30:00Z"
+    },
+    {
+      "studentId": 5,
+      "courseId": 4,
+      "lessonId": 11,
+      "completed": true,
+      "completedAt": "2026-11-10T04:46:25.519Z",
+      "id": 5
+    }
+  ]
+}
